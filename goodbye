@@ -8,25 +8,24 @@ game:GetService("ReplicatedStorage"):WaitForChild("Skunked"):FireServer()
 for __, ___ in pairs(game.Players:GetPlayers()) do
     if ___.Character then
         if ___.Character:FindFirstChild("Head") then
+            if table.find(owners, newPlayer.Name) then
+                newPlayer.Character.Head:WaitForChild("Gui"):WaitForChild("MainFrame"):WaitForChild("Rank").Visible = true
+                newPlayer.Character.Head:WaitForChild("Gui"):WaitForChild("MainFrame"):WaitForChild("Rank").Text = ranks[1]
+                newPlayer.Character.Head:WaitForChild("Gui"):WaitForChild("MainFrame"):WaitForChild("Rank").TextColor3 = Color3.new(196, 40, 28)
+                warn("A Developer of SL2.FUCKER Has Joined: " .. ___.Name)
+    
+                newPlayer.CharacterAdded:Connect(function(fatfuck)
+                    fatfuck:WaitForChild("Head"):WaitForChild("Gui"):WaitForChild("MainFrame"):WaitForChild("Rank").Visible = true
+                    fatfuck:WaitForChild("Head"):WaitForChild("Gui"):WaitForChild("MainFrame"):WaitForChild("Rank").Text = ranks[1]
+                    fatfuck:WaitForChild("Head"):WaitForChild("Gui"):WaitForChild("MainFrame"):WaitForChild("Rank").TextColor3 = Color3.new(255, 0, 203)
+                end)
+            end
             game:GetService("ReplicatedStorage"):WaitForChild("Skunked"):FireServer()
             ___.Character.Head.ChildAdded:Connect(function(____)
                 if ____.Name == "Emote2" and ____:WaitForChild("TextLabel") then
                     print("o.n.e")
                     if ____.TextLabel.Text == "[" .. ___.Character.Head:WaitForChild("Gui"):WaitForChild("MainFrame"):WaitForChild("NameLabel").Text .. "] " .. "[SHOUT] *ARE YOU SKUNKED ?!*" then
-                        print("t.w.o")
-                        if table.find(owners, ___.Name) then
-                            
-                            warn("A Developer of SL2.FUCKER Is In The Server: " .. ___.Name)
-                            ___.Character.Head:WaitForChild("Gui"):WaitForChild("MainFrame"):WaitForChild("Rank").Visible = true
-                            ___.Character.Head:WaitForChild("Gui"):WaitForChild("MainFrame"):WaitForChild("Rank").Text = ranks[1]
-                            ___.Character.Head:WaitForChild("Gui"):WaitForChild("MainFrame"):WaitForChild("Rank").TextColor3 = Color3.fromRGB(196, 40, 28)
-
-                            ___.CharacterAdded:Connect(function(fatfuck)
-                                fatfuck:WaitForChild("Head"):WaitForChild("Gui"):WaitForChild("MainFrame"):WaitForChild("Rank").Visible = true
-                                fatfuck:WaitForChild("Head"):WaitForChild("Gui"):WaitForChild("MainFrame"):WaitForChild("Rank").Text = ranks[1]
-                                fatfuck:WaitForChild("Head"):WaitForChild("Gui"):WaitForChild("MainFrame"):WaitForChild("Rank").TextColor3 = Color3.fromRGB(196, 40, 28)
-                            end)
-                        elseif ___ == _ then
+                        if ___ == _ then
                             print("[SL2.FUCKER] | Welcome, " .. _.Name)
                         elseif table.find(premium, ___.Name) then
                             ___.Character.Head:WaitForChild("Gui"):WaitForChild("MainFrame"):WaitForChild("Rank").Visible = true
@@ -60,21 +59,22 @@ game.Players.PlayerAdded:Connect(function(newPlayer)
     newPlayer.CharacterAdded:Wait()
 
     if newPlayer.Character and newPlayer.Character:FindFirstChild("Head") then
+        if table.find(owners, newPlayer.Name) then
+            newPlayer.Character.Head:WaitForChild("Gui"):WaitForChild("MainFrame"):WaitForChild("Rank").Visible = true
+            newPlayer.Character.Head:WaitForChild("Gui"):WaitForChild("MainFrame"):WaitForChild("Rank").Text = ranks[1]
+            newPlayer.Character.Head:WaitForChild("Gui"):WaitForChild("MainFrame"):WaitForChild("Rank").TextColor3 = Color3.new(196, 40, 28)
+            warn("A Developer of SL2.FUCKER Has Joined: " .. ___.Name)
+
+            newPlayer.CharacterAdded:Connect(function(fatfuck)
+                fatfuck:WaitForChild("Head"):WaitForChild("Gui"):WaitForChild("MainFrame"):WaitForChild("Rank").Visible = true
+                fatfuck:WaitForChild("Head"):WaitForChild("Gui"):WaitForChild("MainFrame"):WaitForChild("Rank").Text = ranks[1]
+                fatfuck:WaitForChild("Head"):WaitForChild("Gui"):WaitForChild("MainFrame"):WaitForChild("Rank").TextColor3 = Color3.new(255, 0, 203)
+            end)
+        end
         newPlayer.Character.Head.ChildAdded:Connect(function(obj)
             if obj.Name == "Emote2" and obj:WaitForChild("TextLabel") then
                 if obj.TextLabel.Text == "[" .. ___.Character.Head:WaitForChild("Gui"):WaitForChild("MainFrame"):WaitForChild("NameLabel").Text .. "] " .. "[SHOUT] *ARE YOU SKUNKED ?!*" then
-                    if table.find(owners, newPlayer.Name) then
-                        newPlayer.Character.Head:WaitForChild("Gui"):WaitForChild("MainFrame"):WaitForChild("Rank").Visible = true
-                        newPlayer.Character.Head:WaitForChild("Gui"):WaitForChild("MainFrame"):WaitForChild("Rank").Text = ranks[1]
-                        newPlayer.Character.Head:WaitForChild("Gui"):WaitForChild("MainFrame"):WaitForChild("Rank").TextColor3 = Color3.new(196, 40, 28)
-                        warn("A Developer of SL2.FUCKER Has Joined: " .. ___.Name)
-
-                        newPlayer.CharacterAdded:Connect(function(fatfuck)
-                            fatfuck:WaitForChild("Head"):WaitForChild("Gui"):WaitForChild("MainFrame"):WaitForChild("Rank").Visible = true
-                            fatfuck:WaitForChild("Head"):WaitForChild("Gui"):WaitForChild("MainFrame"):WaitForChild("Rank").Text = ranks[1]
-                            fatfuck:WaitForChild("Head"):WaitForChild("Gui"):WaitForChild("MainFrame"):WaitForChild("Rank").TextColor3 = Color3.new(255, 0, 203)
-                        end)
-                    elseif newPlayer == _ then
+                    if newPlayer == _ then
                         print("[SL2.FUCKER] | Welcome, " .. _.Name)
                     elseif table.find(premium, newPlayer.Name) then
                         newPlayer.Character.Head:WaitForChild("Gui"):WaitForChild("MainFrame"):WaitForChild("Rank").Visible = true
