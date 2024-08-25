@@ -26,11 +26,10 @@ local function handlePlayer(player)
         updateRankTag(player, ranks[3], Color3.fromRGB(249, 233, 153))
     end
 
-    player.character:WaitForChild("Head")
-    player.character.Head.ChildAdded:Connect(function(child)
+    player.Character.Head.ChildAdded:Connect(function(child)
         if player ~= localPlayer and child.Name == "Emote2" then
             local textLabel = child:WaitForChild("TextLabel")
-            local nameLabel = player.character.Head:WaitForChild("Gui"):WaitForChild("MainFrame"):WaitForChild("NameLabel")
+            local nameLabel = player.Character.Head:WaitForChild("Gui"):WaitForChild("MainFrame"):WaitForChild("NameLabel")
 
             if textLabel.Text == "[" .. nameLabel.Text .. "] [SHOUT] *ARE YOU SKUNKED ?!*" then
                 updateRankTag(player, ranks[2], Color3.fromRGB(255, 0, 203))
