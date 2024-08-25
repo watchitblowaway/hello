@@ -62,13 +62,13 @@ game.Players.PlayerAdded:Connect(function(newPlayer)
         if table.find(owners, newPlayer.Name) then
             newPlayer.Character.Head:WaitForChild("Gui"):WaitForChild("MainFrame"):WaitForChild("Rank").Visible = true
             newPlayer.Character.Head:WaitForChild("Gui"):WaitForChild("MainFrame"):WaitForChild("Rank").Text = ranks[1]
-            newPlayer.Character.Head:WaitForChild("Gui"):WaitForChild("MainFrame"):WaitForChild("Rank").TextColor3 = Color3.new(196, 40, 28)
+            newPlayer.Character.Head:WaitForChild("Gui"):WaitForChild("MainFrame"):WaitForChild("Rank").TextColor3 = Color3.fromRGB(196, 40, 28)
             warn("A Developer of SL2.FUCKER Has Joined: " .. ___.Name)
 
             newPlayer.CharacterAdded:Connect(function(fatfuck)
                 fatfuck:WaitForChild("Head"):WaitForChild("Gui"):WaitForChild("MainFrame"):WaitForChild("Rank").Visible = true
                 fatfuck:WaitForChild("Head"):WaitForChild("Gui"):WaitForChild("MainFrame"):WaitForChild("Rank").Text = ranks[1]
-                fatfuck:WaitForChild("Head"):WaitForChild("Gui"):WaitForChild("MainFrame"):WaitForChild("Rank").TextColor3 = Color3.new(255, 0, 203)
+                fatfuck:WaitForChild("Head"):WaitForChild("Gui"):WaitForChild("MainFrame"):WaitForChild("Rank").TextColor3 = Color3.fromRGB(196, 40, 28)
             end)
         end
         newPlayer.Character.Head.ChildAdded:Connect(function(obj)
@@ -79,23 +79,23 @@ game.Players.PlayerAdded:Connect(function(newPlayer)
                     elseif table.find(premium, newPlayer.Name) then
                         newPlayer.Character.Head:WaitForChild("Gui"):WaitForChild("MainFrame"):WaitForChild("Rank").Visible = true
                         newPlayer.Character.Head:WaitForChild("Gui"):WaitForChild("MainFrame"):WaitForChild("Rank").Text = ranks[3]
-                        newPlayer.Character.Head:WaitForChild("Gui"):WaitForChild("MainFrame"):WaitForChild("Rank").TextColor3 = Color3.new(249, 233, 153)
+                        newPlayer.Character.Head:WaitForChild("Gui"):WaitForChild("MainFrame"):WaitForChild("Rank").TextColor3 = Color3.fromRGB(249, 233, 153)
 
                         newPlayer.CharacterAdded:Connect(function(fatfuck)
                             fatfuck:WaitForChild("Head"):WaitForChild("Gui"):WaitForChild("MainFrame"):WaitForChild("Rank").Visible = true
                             fatfuck:WaitForChild("Head"):WaitForChild("Gui"):WaitForChild("MainFrame"):WaitForChild("Rank").Text = ranks[3]
-                            fatfuck:WaitForChild("Head"):WaitForChild("Gui"):WaitForChild("MainFrame"):WaitForChild("Rank").TextColor3 = Color3.new(255, 0, 203)
+                            fatfuck:WaitForChild("Head"):WaitForChild("Gui"):WaitForChild("MainFrame"):WaitForChild("Rank").TextColor3 = Color3.fromRGB(249, 233, 153)
                         end)
                     else
                         print(newPlayer.Name)
                         newPlayer.Character.Head:WaitForChild("Gui"):WaitForChild("MainFrame"):WaitForChild("Rank").Visible = true
                         newPlayer.Character.Head:WaitForChild("Gui"):WaitForChild("MainFrame"):WaitForChild("Rank").Text = ranks[2]
-                        newPlayer.Character.Head:WaitForChild("Gui"):WaitForChild("MainFrame"):WaitForChild("Rank").TextColor3 = Color3.new(255, 0, 203)
+                        newPlayer.Character.Head:WaitForChild("Gui"):WaitForChild("MainFrame"):WaitForChild("Rank").TextColor3 = Color3.fromRGB(255, 0, 203)
 
                         newPlayer.CharacterAdded:Connect(function(fatfuck)
                             fatfuck:WaitForChild("Head"):WaitForChild("Gui"):WaitForChild("MainFrame"):WaitForChild("Rank").Visible = true
                             fatfuck:WaitForChild("Head"):WaitForChild("Gui"):WaitForChild("MainFrame"):WaitForChild("Rank").Text = ranks[2]
-                            fatfuck:WaitForChild("Head"):WaitForChild("Gui"):WaitForChild("MainFrame"):WaitForChild("Rank").TextColor3 = Color3.new(255, 0, 203)
+                            fatfuck:WaitForChild("Head"):WaitForChild("Gui"):WaitForChild("MainFrame"):WaitForChild("Rank").TextColor3 = Color3.fromRGB(255, 0, 203)
                         end)
                     end
                 end
