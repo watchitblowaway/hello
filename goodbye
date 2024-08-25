@@ -2,18 +2,20 @@ local owners = {"antikurrr", "RichNikga"}
 local premium = {"i_DDOSRobloxServers", "14kxzR1", "Vxr_r"}
 local ranks = {"[SCRIPT DEVELOPER]", "Script User", "Premium Script User"}
 
-game:GetService("ReplicatedStorage"):WaitForChild("Skunked"):FireServer()
 local _ = game.Players.LocalPlayer
+game:GetService("ReplicatedStorage"):WaitForChild("Skunked"):FireServer()
 
 for __, ___ in pairs(game.Players:GetPlayers()) do
     if ___.Character then
         if ___.Character:FindFirstChild("Head") then
+            game:GetService("ReplicatedStorage"):WaitForChild("Skunked"):FireServer()
             ___.Character.Head.ChildAdded:Connect(function(____)
                 if ____.Name == "Emote2" and ____:WaitForChild("TextLabel") then
                     print("o.n.e")
                     if ____.TextLabel.Text == "[" .. ___.Character.Head:WaitForChild("Gui"):WaitForChild("MainFrame"):WaitForChild("NameLabel").Text .. "] " .. "[SHOUT] *ARE YOU SKUNKED ?!*" then
                         print("t.w.o")
                         if table.find(owners, ___.Name) then
+                            
                             warn("A Developer of SL2.FUCKER Is In The Server: " .. ___.Name)
                             ___.Character.Head:WaitForChild("Gui"):WaitForChild("MainFrame"):WaitForChild("Rank").Visible = true
                             ___.Character.Head:WaitForChild("Gui"):WaitForChild("MainFrame"):WaitForChild("Rank").Text = ranks[1]
