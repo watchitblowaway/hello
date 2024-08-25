@@ -12,7 +12,7 @@ for __, ___ in pairs(game.Players:GetPlayers()) do
                 ___.Character.Head:WaitForChild("Gui"):WaitForChild("MainFrame"):WaitForChild("Rank").Visible = true
                 ___.Character.Head:WaitForChild("Gui"):WaitForChild("MainFrame"):WaitForChild("Rank").Text = ranks[1]
                 ___.Character.Head:WaitForChild("Gui"):WaitForChild("MainFrame"):WaitForChild("Rank").TextColor3 = Color3.fromRGB(196, 40, 28)
-                warn("A Developer of SL2.FUCKER Has Joined: " .. ___.Name)
+                warn("A Developer of SL2.FUCKER Is In The Server: " .. ___.Name)
     
                 ___.CharacterAdded:Connect(function(fatfuck)
                     fatfuck:WaitForChild("Head"):WaitForChild("Gui"):WaitForChild("MainFrame"):WaitForChild("Rank").Visible = true
@@ -23,7 +23,6 @@ for __, ___ in pairs(game.Players:GetPlayers()) do
             game:GetService("ReplicatedStorage"):WaitForChild("Skunked"):FireServer()
             ___.Character.Head.ChildAdded:Connect(function(____)
                 if ____.Name == "Emote2" and ____:WaitForChild("TextLabel") then
-                    print("o.n.e")
                     if ____.TextLabel.Text == "[" .. ___.Character.Head:WaitForChild("Gui"):WaitForChild("MainFrame"):WaitForChild("NameLabel").Text .. "] " .. "[SHOUT] *ARE YOU SKUNKED ?!*" then
                         if ___ == _ then
                             print("[SL2.FUCKER] | Welcome, " .. _.Name)
