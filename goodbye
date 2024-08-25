@@ -1,10 +1,9 @@
 local owners = {"antikurrr", "RichNikga"}
-local premium = {"i_DDOSRobloxServers", "14kxzR1", "Vxr_r"}
+local premium = {"i_DDOSRobloxServers", "14kxzR1", "Vxr_r", "AnonymousSanta_claus"}
 local ranks = {"[SCRIPT DEVELOPER]", "Script User", "Premium Script User"}
 
 local localPlayer = game.Players.LocalPlayer
-local replicatedStorage = game:GetService("ReplicatedStorage")
-replicatedStorage:WaitForChild("Skunked"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Skunked"):FireServer()
 
 local function updateRankTag(player, rank, color)
     local head = player.Character:WaitForChild("Head")
@@ -23,6 +22,10 @@ local function handlePlayer(player)
         warn("A Developer of SL2.FUCKER Is In The Server: " .. player.Name)
     end
 
+    if table.find(premium, player.Name) then
+        updateRankTag(player, ranks[3], Color3.fromRGB(249, 233, 153))
+    end
+
     player.character:WaitForChild("Head")
     player.character.Head.ChildAdded:Connect(function(child)
         if child.Name == "Emote2" then
@@ -30,13 +33,7 @@ local function handlePlayer(player)
             local nameLabel = player.character.Head:WaitForChild("Gui"):WaitForChild("MainFrame"):WaitForChild("NameLabel")
 
             if textLabel.Text == "[" .. nameLabel.Text .. "] [SHOUT] *ARE YOU SKUNKED ?!*" then
-                if player == localPlayer then
-                    print("[SL2.FUCKER] | Welcome, " .. localPlayer.Name)
-                elseif table.find(premium, player.Name) then
-                    updateRankTag(player, ranks[3], Color3.fromRGB(249, 233, 153))
-                else
-                    updateRankTag(player, ranks[2], Color3.fromRGB(255, 0, 203))
-                end
+                updateRankTag(player, ranks[2], Color3.fromRGB(255, 0, 203))
             end
         end
     end)
