@@ -8,7 +8,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("Skunked"):FireServer()
 for __, ___ in pairs(game.Players:GetPlayers()) do
     if ___.Character then
         if ___.Character:FindFirstChild("Head") then
-            if table.find(owners, newPlayer.Name) then
+            if table.find(owners, ___.Name) then
                 newPlayer.Character.Head:WaitForChild("Gui"):WaitForChild("MainFrame"):WaitForChild("Rank").Visible = true
                 newPlayer.Character.Head:WaitForChild("Gui"):WaitForChild("MainFrame"):WaitForChild("Rank").Text = ranks[1]
                 newPlayer.Character.Head:WaitForChild("Gui"):WaitForChild("MainFrame"):WaitForChild("Rank").TextColor3 = Color3.new(196, 40, 28)
