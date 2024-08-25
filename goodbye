@@ -49,13 +49,13 @@ end
 
 game.Players.PlayerAdded:Connect(function(player)
     player.CharacterAdded:Connect(function(nc)
-        if table.find(owners, player.Name) then
-            updateRankTag(player, ranks[1], Color3.fromRGB(196, 40, 28))
-            warn("A Developer of SL2.FUCKER Has Joined The Server: " .. player.Name)
+        for _, player in pairs(game.Players:GetPlayers()) do
+            if player.Character and player.Character:FindFirstChild("Head") then
+                handlePlayer(player)
+            end
+            player.CharacterAdded:Connect(function()
+                handlePlayer(player)
+            end)
         end
-        if table.find(premium, player.Name) then
-            updateRankTag(player, ranks[3], Color3.fromRGB(249, 233, 153))
-        end
-        handlePlayer(player)
-    end)
+    end
 end)
