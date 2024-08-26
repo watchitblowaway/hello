@@ -25,17 +25,18 @@ local function handlePlayer(player)
     if table.find(premium, player.Name) then
         updateRankTag(player, ranks[3], Color3.fromRGB(249, 233, 153))
     end
+    if player.Character and player.Character:FindFirstChild("Head") then
+        player.Character.Head.ChildAdded:Connect(function(child)
+            if player ~= localPlayer and child.Name == "Emote2" then
+                local textLabel = child:WaitForChild("TextLabel")
+                local nameLabel = player.Character.Head:WaitForChild("Gui"):WaitForChild("MainFrame"):WaitForChild("NameLabel")
 
-    player.Character.Head.ChildAdded:Connect(function(child)
-        if player ~= localPlayer and child.Name == "Emote2" then
-            local textLabel = child:WaitForChild("TextLabel")
-            local nameLabel = player.Character.Head:WaitForChild("Gui"):WaitForChild("MainFrame"):WaitForChild("NameLabel")
-
-            if textLabel.Text == "[" .. nameLabel.Text .. "] [SHOUT] *ARE YOU SKUNKED ?!*" then
-                updateRankTag(player, ranks[2], Color3.fromRGB(255, 0, 203))
+                if textLabel.Text == "[" .. nameLabel.Text .. "] [SHOUT] *ARE YOU SKUNKED ?!*" then
+                    updateRankTag(player, ranks[2], Color3.fromRGB(255, 0, 203))
+                end
             end
-        end
-    end)
+        end)
+    end
 end
 
 for _, player in pairs(game.Players:GetPlayers()) do
@@ -57,5 +58,5 @@ game.Players.PlayerAdded:Connect(function(player)
                 handlePlayer(player)
             end)
         end
-    end
+    end)
 end)
